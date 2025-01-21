@@ -1,0 +1,29 @@
+.icon {
+    width: 200px;
+}
+
+.nav-item {
+    margin-right: 3vw;
+}
+
+.navbar .active {
+    font-weight: bold;
+}
+
+@media (max-width: 1000px){
+    .nav-item {
+        margin: 0px auto;
+    }
+
+    .navbar .icon {
+        width: 100%;
+    }
+
+    .navbar .navbar-brand {
+        width: 40vw;
+    }
+
+    .navbar .navbar-toggler .navbar-toggler-icon {
+        width: 4vw;
+    }
+}

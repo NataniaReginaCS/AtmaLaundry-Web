@@ -1,0 +1,317 @@
+#content {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    overflow-y: auto;
+}
+
+.content-warp {
+    margin-left: 0px;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 68px;
+    top: 4px;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #54c1fa;
+}
+
+#admin-dashboard {
+    width: 100%;
+
+    display: grid;
+    justify-content: start;
+    align-items: start;
+
+    grid-template-areas:
+        "title title"
+        "opsi money"
+        "order money"
+        "order statistic";
+
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 10% 40% 10% 35%;
+
+    gap: 10px 10px;
+}
+
+#admin-dashboard .title {
+    grid-area: title;
+}
+
+.list-menu {
+    grid-area: opsi;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.list-menu .menu {
+    color: white;
+    background-color: #64a6f9;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 10rem;
+    height: 10rem;
+    margin: 0px 10px;
+}
+
+.list-menu .menu:hover {
+    filter: brightness(0.9);
+}
+
+.list-menu .menu i {
+    font-size: 4vw;
+}
+
+.list-menu .menu p {
+    margin: 5px;
+    font-size: 20px;
+}
+
+.recent-order {
+    grid-area: order;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    padding: 15px;
+    overflow: auto;
+}
+
+.recent-order table {
+    width: 100%;
+    min-width: 25rem;
+    border-collapse: collapse;
+}
+
+.recent-order tr {
+    border-radius: 20px;
+}
+
+.recent-order .nomor {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1678f3;
+    color: white;
+    border-radius: 5px;
+}
+
+.balance {
+    grid-area: money;
+    margin: 0px 10px;
+}
+
+.card {
+    border: 0px solid rgba(0, 0, 0, 0);
+}
+
+.card-header {
+    background-color: #4dbae9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header * {
+    font-size: 2rem;
+    color: white;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.money {
+    font-size: 2.5rem;
+    color: #4dbae9;
+}
+
+.percentage {
+    font-size: 1.5rem;
+    color: red;
+}
+
+.statistic {
+    grid-area: statistic;
+    margin: 0px 20px;
+}
+
+.statistic table {
+    width: 100%;
+    font-size: 1.5rem;
+    color: #4dbae9;
+}
+
+.shadow {
+    box-shadow: 0px 0px 5px 10px lightslategray;
+}
+
+#service-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 25px auto;
+}
+
+.service-card {
+    width: 20vw;
+    border-radius: 20px;
+
+    box-shadow: 0px 2px 2px 2px grey;
+
+    text-align: center;
+}
+
+.front {
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+
+.back {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d0f6ff;
+
+    padding: 0px;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.additional p {
+    margin: 0;
+}
+
+.service-card:hover .front {
+    padding: 0px;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.service-card:hover .back {
+    padding: 20px;
+    opacity: 100%;
+    height: 100%;
+}
+
+.service-card img {
+    width: 100%;
+}
+
+.service-card .name {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.service-card .price {
+    font-size: larger;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 30px;
+    padding: 3px 7px;
+    box-shadow: 0px 2px 2px 2px grey;
+}
+
+.information {
+    color: gray;
+}
+
+@media (max-width: 1000px) {
+    #admin-dashboard {
+        width: 100%;
+
+        display: grid;
+        justify-content: start;
+        align-items: start;
+    
+        grid-template-areas: 
+        'title'
+        'money'
+        'opsi'
+        'statistic'
+        'order';
+    
+        grid-template-columns : 100%;
+        grid-template-rows: 5% 23% 24% 24% 24%;
+
+        gap: 20px 10px;
+    }
+
+    .card-header p,
+    .card-header i {
+        font-size: 1.5rem;
+    }
+
+    .money {
+        font-size: 1rem;
+    }
+
+    .percentage {
+        font-size: 1rem;
+    }
+
+    .card-body table tr td {
+        font-size: 1rem;
+    }
+
+    #admin-dashboard .list-menu .menu {
+        width: 500px;
+        padding: 0px 50px;
+    }
+
+    #admin-dashboard .service-card-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #admin-dashboard .service-card-list .service-card {
+        width: 80%;
+        margin: 15px auto;
+        padding: 5px;
+    }
+
+    .additional {
+        margin: 20px auto;
+    }
+}

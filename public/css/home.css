@@ -1,0 +1,606 @@
+body #home, body #howitworks, body #services, body #aboutus, body #review, body #locations, body #service-detail, body #review-detail {
+    min-height: 70vh;
+}
+
+.bold-title {
+    font-weight: 600;
+}
+
+.grey-text {
+    color: #7F8490;
+}
+
+#home {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+#home .paragraph {
+    width: 35vw;
+    margin-right: 30px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#home .image {
+    width: 470px;
+    height: 470px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    position: relative;
+}
+
+#home .info {
+    margin: 0px 25px;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#home .paragraph h1 {
+    font-size: 4vw;
+}
+
+#home .image #diswasher {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+#home .image #btop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 30%;
+    animation: bubble 3s linear 0s infinite alternate;
+}
+
+#home .image #bbottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    width: 30%;
+    animation: bubble 3s linear 0s infinite alternate;
+}
+
+.star {
+    display: inline-block;
+}
+
+.orange-star {
+    display: inline-block;
+    color: #EE7F50;
+}
+
+.mini-title {
+    color: #83639E;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0;
+}
+
+.blue-mini-title {
+    color: #3085F1;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.blue-btn {
+    border-radius: 30px;
+    background-color: #84DAE7;
+    border: 1px solid black;
+    font-weight: 600;
+    padding: 10px 25px;
+}
+
+.blue-btn:hover {
+    background-color: #84DAE7;
+    color: black;
+    filter: brightness(80%);
+}
+
+.white-btn {
+    border-radius: 30px;
+    padding: 10px 25px;
+}
+
+.white-btn:hover {
+    background-color: white;
+    color: black;
+    filter: brightness(80%);
+}
+
+#howitworks {
+    width: 100%;
+    background-color: #D0F6FF;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+#howitworks .card img {
+    width: 100%;
+}
+
+#howitworks .card-title {
+    color: #21B7E2;
+}
+
+#howitworks h3 {
+    color: #21B7E2;
+    margin: 20px;
+}
+
+#howitworks h1 {
+    color: #263238;
+    margin: 20px;
+}
+
+#howitworks .card-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#howitworks .card {
+    box-shadow: 0px 5px 10px #888888;
+}
+
+#services {
+    width: 100%;
+    padding: 30px;
+}
+
+#services .sub-title h1 {
+    font-size: 46px;
+}
+
+#services .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#services .service-card {
+    width: 15rem;
+    margin: 10px;
+}
+
+#services .service-card p i {
+    color: #1c98ed;
+}
+
+#services .service-card hr {
+    border-top: 2px dashed black;
+    width: 100%;
+}
+
+#services .btn-learn {
+    background-color: #D0F6FF;
+    font-weight: bold;
+    border-radius: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+#services .btn-learn:hover {
+    color: black;
+    filter: brightness(80%);
+}
+
+#aboutus {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 100px;
+    padding: 30px;
+}
+
+#aboutus .paragraph {
+    width: 35vw;
+    margin-right: 30px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#aboutus .paragraph h1 {
+    font-size: 4vw;
+}
+
+#aboutus .all-progress {
+    width: 470px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#aboutus .all-progress .a-progress {
+    margin: 20px 0px;
+}
+
+#aboutus .all-progress .a-progress .progress-detail .progress {
+    height: 10px;
+}
+
+#aboutus .all-progress .a-progress .progress-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+#aboutus .all-progress .name {
+    font-weight: bold;
+    color: #1B1850;
+}
+
+#aboutus .all-progress .percent {
+    font-weight: bold;
+    color: #F1598F;
+}
+
+#review {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+#review .review-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#review .review-list .card {
+    box-shadow: 0px 0px 10px #888888;
+    text-align: center;
+    margin: 50px 20px;
+    width: 30%;
+}
+
+#review .review-list .card .card-text {
+    color: #424242;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.user-profile {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile .profile-picture {
+    width: 42px;
+    height: 42px;
+    border: 1px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.user-profile .username {
+    color: #21B7E2;
+    font-weight: bold;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 0px;
+    padding: 0px;
+    justify-self: start;
+}
+
+.user-profile .role {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 0px;
+    padding: 0px;
+    justify-self: start;
+}
+
+#review a {
+    text-decoration: none;
+    color: #1065CF;
+    font-size: 20px;
+}
+
+#review a:hover {
+    color: red;
+}
+
+#review .review-list .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#locations {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+#locations .location-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#locations .location-list .card {
+    border: 0px solid black;
+    box-shadow: 0px 5px 5px #888888;
+    margin: 50px 20px;
+}
+
+#locations .location-list .card .cabang {
+    font-weight: bold;
+}
+
+#locations .location-list .card img {
+    width: 50%;
+    margin: 10px auto;
+}
+
+#locations .location-list .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#locations .location-list .card .card-body a {
+    background-color: #84DAE7;
+    border-radius: 30px;
+    border: 0px solid black;
+}
+
+#locations .location-list .card .card-body a:hover {
+    filter: brightness(80%);
+}
+
+#service-detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+
+
+#review-detail {
+    width: 100%;
+    padding: 30px;
+}
+
+#review-detail .main-text * {
+    margin: 5px auto;
+    text-align: center;
+}
+
+#review-detail .main-text p {
+    width: 70%;
+}
+
+.horizontal-scrollable {
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 20px auto;
+}
+
+#review-detail .user-review .review-card {
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#review-detail .user-review .review-card .divider {
+    border: 1px solid grey;
+    margin: 0;
+    padding: 0;
+}
+
+#review-detail .user-review .review-card .review-card-body,
+#review-detail .user-review .review-card .review-card-footer {
+    padding: 10px 20px;
+}
+
+#review-detail .user-review .review-card .user-profile {
+    display: grid;
+    justify-content: start;
+    align-items: center;
+}
+
+#review-detail .user-review .review-card .user-profile .username {
+    color: black;
+}
+
+#review-detail .user-review .review-card .user-profile .role {
+    color: grey;
+}
+
+#review-detail .close-text * {
+    margin: 5px auto;
+    text-align: center;
+}
+
+
+
+#service-detail {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#service-detail .main-text * {
+    margin: 5px auto;
+    text-align: center;
+}
+
+#service-detail .main-text p {
+    width: 70%;
+}
+
+.divider-dotted {
+    border-top: 1px dashed black;
+}
+
+#service-detail .service-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+#service-detail .service-list .service-card {
+    padding: 15px;
+    margin: 5px;
+    width: 18rem;
+}
+
+#service-detail .service-list .service-card .number {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #1C98ED;
+    color: white;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#service-detail .service-list .service-card .service-name {
+    display: inline-block;
+    margin: 0px 5px;
+    font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+    #home .paragraph {
+        width: 100%;
+        margin: 20px auto;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    #home .image {
+        min-width: 35vw;
+        min-height: 35vw;
+        max-width: 50vw;
+        max-height: 50vw;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        position: relative;
+        justify-self: center;
+    }
+    
+    #home .info {
+        margin: 30px 0px 0px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    #home .info .detail-info {
+        margin: 0px 5px;
+    }
+
+    #home .info h2 {
+        font-size: 4vw;
+    }
+
+    #home .info p {
+        font-size: 3vw;
+    }
+
+    #home .paragraph h1 {
+        font-size: 8vw;
+    }
+
+    #services .sub-title h1 {
+        font-size: 8vw;
+    }
+
+    #aboutus .paragraph {
+        width: 80vw;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #aboutus .info h2 {
+        font-size: 4vw;
+    }
+
+    #aboutus .info p {
+        font-size: 3vw;
+    }
+
+    #aboutus .paragraph h1 {
+        font-size: 8vw;
+    }
+
+    #aboutus .all-progress {
+        width: 80vw;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    #review .review-list {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #review .review-list .card {
+        min-width: 60vw;
+        margin: 30px auto;
+    }
+}
+
+@keyframes bubble {
+    from {
+        margin: 0px;
+    }
+    to {
+        margin: 20px;
+    }
+}

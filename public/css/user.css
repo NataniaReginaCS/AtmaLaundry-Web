@@ -1,0 +1,934 @@
+#content {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    overflow-y: auto;
+}
+
+.content-warp  {
+    margin-left: 0px;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 68px;
+    top: 4px;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #54C1FA;
+}
+
+.modal-content input {
+    background-color: #aeaeae;
+    border-radius: 30px;
+    border: 0px solid black;
+    padding: 2px;
+}
+
+#editProfileToast {
+    background-color: #06C1FF;
+    color: white;
+}
+
+#user-dashboard {
+    width: 100%;
+
+    display: grid;
+    justify-content: start;
+    align-items: start;
+
+    grid-template-areas: 
+    'title title'
+    'opsi money'
+    'order money'
+    'order statistic';
+
+    grid-template-columns : 65% 35%;
+    grid-template-rows: 10% 40% 10% 35%;
+
+    gap: 10px 10px;
+}
+
+#user-dashboard .title {
+    grid-area: title;
+}
+
+.list-menu {
+    grid-area: opsi;
+    background-color: #F3F3F3;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.list-menu .menu {
+    color: white;
+    background-color: #64A6F9;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 10rem;
+    height: 10rem;
+    margin: 0px 10px;
+}
+
+.list-menu .menu:hover {
+    filter: brightness(0.9);
+}
+
+.list-menu .menu i {
+    font-size: 4vw;
+}
+
+.list-menu .menu p {
+    margin: 5px;
+    font-size: 20px;
+}
+
+.recent-order {
+    grid-area: order;
+    background-color: #F3F3F3;
+    border-radius: 20px;
+    padding: 15px;
+    overflow: auto;
+}
+
+.recent-order table {
+    width: 100%;
+    min-width: 25rem;
+    border-collapse: collapse;
+}
+
+.recent-order tr {
+    border-radius: 20px;
+}
+
+.nomor {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1678F3;
+    color: white;
+    border-radius: 5px;
+}
+
+.balance {
+    grid-area: money;
+    margin: 0px 10px;
+}
+
+.card {
+    border: 0px solid rgba(0, 0, 0, 0);
+}
+
+.card-header {
+    background-color: #4DBAE9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header * {
+    font-size: 2rem;
+    color: white;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.money {
+    font-size: 2.5rem;
+    color: #4DBAE9;
+}
+
+.percentage {
+    font-size: 1.5rem;
+    color: red;
+}
+
+.statistic {
+    grid-area: statistic;
+    margin: 0px 20px;
+    
+}
+
+.statistic table {
+    width: 100%;
+    font-size: 1.5rem;
+    color: #4DBAE9;
+}
+
+.shadow {
+    box-shadow: 0px 0px 5px 10px lightslategray;
+}
+
+
+
+#service-list {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 25px auto;
+}
+
+.service-card {
+    width: 20vw;
+    border-radius: 20px;
+    
+    box-shadow: 0px 2px 2px 2px grey;
+
+    text-align: center;
+}
+
+.front {
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3F3F3;
+}
+
+.back {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D0F6FF;
+    
+    padding: 0px;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.additional p {
+    margin: 0;
+}
+
+.service-card:hover .front {
+    padding: 0px;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.service-card:hover .back {
+    padding: 20px;
+    opacity: 100%;
+    height: 100%;
+}
+
+.service-card img {
+    width: 100%;
+}
+
+.service-card .name {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.service-card .price {
+    font-size: larger;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 30px;
+    padding: 3px 7px;
+    box-shadow: 0px 2px 2px 2px grey;
+}
+
+.information {
+    color: gray;
+}
+
+
+
+#order-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-bar form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 15px auto;
+}
+
+.form-bar form .searchbar,
+.form-bar form #show,
+.form-bar form a {
+    display: inline-block;
+    margin: 10px 0px;
+}
+
+.form-bar .searchbar {
+    border-radius: 5px;
+    background-color: #D9D9D9;
+}
+
+.form-bar .searchbar input {
+    padding-right: 10px;
+    border: 0px solid black;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5px 10px;
+}
+
+.form-bar .searchbar button {
+    background-color: rgba(102, 60, 60, 0);
+    border: 0px solid black;
+}
+
+.form-bar .searchbar i {
+    margin: 0px 5px;
+}
+
+#show {
+    background-color: #D9D9D9;
+    border: 0px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#createOrder {
+    background-color: #1678F3;
+    color: white;
+    border: 0px solid black;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+.order-table {
+    overflow-x: auto;
+    background-color: #F3F3F3;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.order-table table td {
+    min-width: 100px;
+    text-align: center;
+}
+
+.order-table table thead td {
+    font-weight: bold;
+}
+
+.order-table table td .nomor {
+    margin: 0px auto;
+}
+
+.order-table table #order-date {
+    min-width: 200px;
+}
+
+.order-table thead tr td {
+    padding-left: 10px;
+}
+
+.order-table form {
+    padding: 0px;
+}
+
+.order-table form .status-btn {
+    margin: 2px;
+    background-color: #1678F3;
+    color: white;
+    border: 0px solid black;
+    border-radius: 30px;
+    padding: 3px 10px;
+}
+
+.order-table form .status-btn:hover {
+    filter: brightness(0.9);
+}
+
+
+.form-container {
+    padding: 15px;
+    background-color: #F3F3F3;
+    border-radius: 15px;
+    box-shadow: 0px 2px 2px 2px grey;
+    margin: 15px 0px;
+}
+
+.form-container #orderForm {
+    display: grid;
+
+    grid-template-areas: 
+    'name phone'
+    'category service'
+    'weight address'
+    'req address'
+    'button button';
+
+    grid-template-columns: 50% 50%;
+    gap: 20px 20px;
+}
+
+.form-container .form-title {
+    color: #1678F3;
+}
+
+.form-container form .customer-name {
+    grid-area: name;
+}
+
+.form-container form .phone-number {
+    grid-area: phone;
+}
+
+.form-container form .category {
+    grid-area: category;
+}
+
+.form-container form .service {
+    grid-area: service;
+}
+
+.form-container form .weight {
+    grid-area: weight;
+}
+
+.form-container form .request {
+    grid-area: req;
+}
+
+.form-container form .address {
+    grid-area: address;
+}
+
+.form-container form .button {
+    grid-area: button;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 20px;
+}
+
+.form-container form .button button {
+    border-radius: 30px;
+}
+
+.form-container form .question * {
+    width: 95%;
+}
+
+.form-container form .question input,
+.form-container form .question select,
+.form-container form .question textarea {
+    background-color: #E4E4E4;
+    border: 0px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
+#order-status .status-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+#order-status .status-card-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+
+#order-status .status-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#order-status .status-card {
+    background-color: #5C9AE9;
+    padding: 20px 40px;
+    border-radius: 10px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    width: 300px;
+    height: 400px;
+}
+
+#order-status .status-card .service-text {
+    color: white;
+}
+
+#order-status .status-card .status-title {
+    color: #D0F6FF;
+    font-weight: bold;
+}
+
+#order-status .back-btn {
+    background-color: #1678F3;
+    color: white;
+    border-radius: 30px;
+    max-width: 100%;
+    padding: 5px 5rem;
+    border: 0px solid black;
+}
+
+#order-status .back-btn:hover {
+    filter: brightness(0.9);
+}
+
+#order-status .btn-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#profile-page .form-container {
+    width: 40%;
+    margin: 15px auto;
+    padding: 20px;
+}
+
+#profile-page .form-container #editProfileForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#profile-page .form-container #editProfileForm .question {
+    margin: 10px 0px;
+}
+
+#profile-page .form-container #editProfileForm .button {
+    margin: 10px 0px;
+}
+
+#profile-page .form-container #editProfileForm .button #saveProfileBtn {
+    border-radius: 5px;
+}
+
+
+
+#checkout-page {
+
+}
+
+#checkout-page .checkout-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+#checkout-page .method-payment-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px auto;
+}
+
+
+#checkout-page .method-payment-container .payment-method {
+    background-color: #3085F1;
+    color: white;
+    padding: 30px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#checkout-page .method-payment-container .payment-method i {
+    font-size: 28px;
+    margin: 20px;
+}
+
+#checkout-page .method-payment-container .active {
+    border: 2px solid #1678F3;
+    color: #1678F3;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#checkout-page .method-payment-container .payment-method:hover {
+    filter: brightness(0.9);
+}
+
+#checkout-page .point-bar {
+    width: 100%;
+    color: #1678F3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#checkout-page .btn-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px auto;
+}
+
+#checkout-page .btn-bar a {
+    margin: 10px auto;
+}
+
+#checkout-page .btn-bar button {
+    width: 200px;
+    border-radius: 30px;
+    padding: 5px 25px;
+    border: 0px solid black;
+}
+
+#checkout-page .btn-bar .cnl-btn {
+    background-color: rgba(0, 0, 0, 0);
+    color: red;
+    border: 2px solid red;
+    box-sizing: border-box;
+}
+
+#checkout-page .btn-bar .cnl-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+#checkout-page .btn-bar .cfm-btn {
+    background-color: #1678F3;
+    color: white;
+}
+
+#checkout-page .btn-bar .cfm-btn:hover {
+    filter: brightness(0.9);
+}
+
+#checkout-page .btn-bar a .disable {
+    background-color: #C4C4C4;
+    color: white;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+
+#summary-page {
+    display: grid;
+    grid-template-areas: 'left right';
+    grid-template-columns: 30% 70%;
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0%;
+}
+
+#summary-page .left {
+    grid-area: left;
+
+    background-color: #5C9AE9;
+    color: white;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#summary-page .left h1 {
+    font-size: 60px;
+    font-weight: lighter;
+}
+
+#summary-page .left a {
+    text-decoration: none;
+    width: 150px;
+    display: flex;
+}
+
+#summary-page .left button {
+    width: 100%;
+    background-color: white;
+    color: #5C9AE9;
+    border-radius: 30px;
+    padding: 5px;
+    border: 0px solid black;
+    font-size: large;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#summary-page .left button:hover {
+    filter: brightness(0.9);
+}
+
+#summary-page .right {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#summary-page .right .summary {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#summary-page .right .summary .orderData {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+#summary-page .right .summary .orderData i {
+    background-color: #1678F3;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+#summary-page .right .summary .orderData .text p {
+    margin: 0;
+}
+
+#summary-page .right .summary .orderReq {
+    margin: 30px 0px;
+}
+
+#summary-page .right .summary .orderData,
+#summary-page .right .summary .req {
+    background-color: #F3F3F3;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#summary-page .right .pay {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#summary-page .right .pay button {
+    color: white;
+    background-color: #1678F3;
+    border-radius: 30px;
+    padding: 5px 20px;
+    border: 0px solid black;
+}
+
+#summary-page .right .pay button:hover {
+    filter: brightness(0.9);
+}
+
+@media (max-width: 1000px) {
+    #user-dashboard {
+        width: 100%;
+    
+        display: grid;
+        justify-content: start;
+        align-items: start;
+    
+        grid-template-areas: 
+        'title'
+        'money'
+        'opsi'
+        'statistic'
+        'order';
+    
+        grid-template-columns : 100%;
+        grid-template-rows: 5% 23% 24% 24% 24%;
+    
+        gap: 20px 10px;
+    }
+
+    .card-header p, .card-header i {
+        font-size: 1.5rem;
+    }
+
+    .money {
+        font-size: 1rem;
+    }
+    
+    .percentage {
+        font-size: 1rem;
+    }
+
+    .card-body table tr td {
+        font-size: 1rem;
+    }
+
+    #user-dashboard .list-menu .menu {
+        width: 500px;
+        padding: 0px 50px;
+    }
+
+    #service-list .service-card-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #service-list .service-card-list .service-card {
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    .additional {
+        margin: 20px auto;
+    }
+
+    .form-bar form .searchbar,
+    .form-bar form #show,
+    .form-bar form a {
+        display: inline-block;
+        margin: 10px auto;
+        width: 100%;
+    }
+
+    .form-bar form .searchbar {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .form-bar form .searchbar input {
+        width: 88%;
+    }
+
+    .form-bar form .searchbar {
+        margin: 0px auto;
+    }
+
+    #order-form .form-container form {
+        display: grid;
+    
+        grid-template-areas: 
+        'name'
+        'phone'
+        'category'
+        'service'
+        'weight'
+        'req'
+        'address'
+        'button';
+    
+        grid-template-columns: 100%;
+        gap: 20px 20px;
+    }
+
+    #profile-page .form-container {
+        width: 80%;
+    }
+
+    #summary-page {
+        grid-template-areas: 
+        'left'
+        'right';
+        grid-template-columns: 100%;
+        grid-row: 10% 90%;
+    }
+
+    #summary-page .left {
+        top: 0;
+        right: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    #summary-page .left h1 {
+        font-size: 5vw;
+        font-weight: lighter;
+    }
+    
+    #summary-page .left a {
+        text-decoration: none;
+        width: 100px;
+        display: flex;
+    }
+
+    #summary-page .right .summary {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: 30px auto;
+    }
+
+}
